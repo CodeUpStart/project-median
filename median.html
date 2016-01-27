@@ -1,0 +1,73 @@
+<head>
+  <title>median</title>
+</head>
+
+<body>
+  <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="https://github.com/Medium/medium-logos/blob/master/logo/medium-m-color-100px.png?raw=true">
+      </a>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-secondary">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Top Stories</a></li>
+            <li><a href="#contact">Bookmarks</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <button type="submit" class="button"> Write a story</button>
+            </li>
+            {{#if currentUser}}
+            <li><a href="#"> {{>userAvatar}}</a></li>
+            {{/if}}
+            <li class="login">{{> loginButtons}}</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container section">
+      {{#if currentUser}}
+      <div class="row">
+        <div class="col-md-1">
+          {{>userAvatar}}
+        </div>
+        <form class="new-story">
+          <div class="col-md-11">
+            <textarea class="story-title" cols="60" rows="1" name="title" placeholder="Title"></textarea>
+            <textarea cols="60" rows="3" name="text" placeholder="Tell Your Story..."></textarea>
+          </div>
+          <button type="submit" class="button button-green">Publish</button>
+        </form>
+      </div>
+    {{/if}}
+
+    <div class="heading-title"> Top Stories for you </div>
+    {{#each stories}}
+    {{> story}}
+    {{/each}}
+    </div>
+</body>
+
+<template name="userAvatar">
+  <img src="{{userAvatar}}" class="avatar-image">
+</template>
+
+<template name="story">
+  <br/>
+  <img src="{{authorAvatar}}" class="avatar-image">
+  <div class="story-author">{{authorName}}</div>
+  <div class="story-createdat">Posted {{formatDate createdAt}}</div>
+  <div class="story-title"> {{title}}</div>
+  <div class="story-text">{{text}}</div>
+</template>

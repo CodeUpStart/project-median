@@ -1,0 +1,116 @@
+/* CSS declarations go here */
+.navbar-default {
+  background: white;
+  background-image: none;
+  height:70px;
+}
+
+.navbar-secondary {
+  padding-top:10px;
+}
+
+.navbar-secondary li{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  background-image: none;
+  background-color: white;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  border-bottom: 2px solid black;
+  color: black;
+  background-image: none;
+  background-color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.button {
+  margin-top: 15px;
+  position: relative;
+  height: 37px;
+  padding: 0px 16px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  font-weight: 400;
+  border-radius: 999em;
+}
+
+.login {
+  margin: 25px 100px 0px 30px;
+}
+
+.avatar-image {
+  border-radius: 25px;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.button-green {
+  border-color: #02b875;
+  color: #00ab6b;
+}
+
+textarea {
+  outline: none !important;
+  resize: none;
+  border: 0px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.story-title {
+  font-size: 32px;
+  font-weight: bold;
+  max-width: 700px;
+}
+
+.story-text {
+  letter-spacing: .01rem;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #efefef;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+.heading-title {
+  margin: 50px 0px 0px 0px;
+  padding: 15px 0px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 18px;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  color: rgba(0,0,0,0.9);
+  border-bottom: 1px solid #efefef;
+}
+
+.story-author {
+  position: relative;
+  top: -40px;
+  left: 60px;
+  color: #00ab6b;
+  text-decoration: none;
+}
+
+.story-createdat {
+  position: relative;
+  top: -40px;
+  left: 60px;
+  color: grey;
+}
